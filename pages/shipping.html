@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Envios e Devoluções Global Supply — Entrega 24-48h em Portugal e Espanha.">
+  <title>Envios & Devoluções | Global Supply</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="announcement-bar">
+  <div class="announcement-track">
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+    <span>📦 Portes grátis em compras acima de €70</span>
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+    <span>📦 Portes grátis em compras acima de €70</span>
+  </div>
+</div>
+
+<header class="header scrolled" id="header">
+  <div class="header-inner container">
+    <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+    <nav class="nav">
+      <a href="../index.html">Início</a>
+      <a href="shop.html">Loja</a>
+      <a href="about.html">Sobre</a>
+      <a href="shipping.html" class="active">Envios</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="openCart()" aria-label="Carrinho">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count"></span>
+      </button>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="logo">GLOBAL<em>SUPPLY</em></span>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer">✕</button>
+  </div>
+  <a href="../index.html" onclick="toggleMobileNav()">Início</a>
+  <a href="shop.html" onclick="toggleMobileNav()">Loja</a>
+  <a href="about.html" onclick="toggleMobileNav()">Sobre Nós</a>
+  <a href="shipping.html" onclick="toggleMobileNav()">Envios &amp; Devoluções</a>
+  <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
+  <a href="contact.html" onclick="toggleMobileNav()">Contacto</a>
+</nav>
+
+<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <p class="breadcrumb"><a href="../index.html">Início</a> / Envios &amp; Devoluções</p>
+    <h1>ENVIOS &amp; DEVOLUÇÕES</h1>
+    <p>Entrega rápida, segura e com rastreamento em tempo real.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- SHIPPING HIGHLIGHTS -->
+    <div class="shipping-highlights">
+      <div class="ship-highlight">
+        <i class="fas fa-bolt"></i>
+        <h3>24-48h</h3>
+        <p>Tempo de entrega para Portugal Continental</p>
+      </div>
+      <div class="ship-highlight">
+        <i class="fas fa-box-open"></i>
+        <h3>Grátis</h3>
+        <p>Portes gratuitos em encomendas acima de €70</p>
+      </div>
+      <div class="ship-highlight">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Rastreamento</h3>
+        <p>Acompanha o teu par do armazém à tua porta</p>
+      </div>
+      <div class="ship-highlight">
+        <i class="fas fa-globe-europe"></i>
+        <h3>PT &amp; ES</h3>
+        <p>Enviamos para toda a Península Ibérica</p>
+      </div>
+    </div>
+
+    <!-- SHIPPING TABLE -->
+    <div style="margin-top:4rem">
+      <h2 class="section-title" style="font-size:2rem;margin-bottom:2rem">TABELA DE ENVIOS</h2>
+      <div class="ship-table">
+        <div class="ship-table-row ship-table-header">
+          <span>Destino</span>
+          <span>Transportadora</span>
+          <span>Prazo</span>
+          <span>Custo</span>
+        </div>
+        <div class="ship-table-row">
+          <span>🇵🇹 Portugal Continental</span>
+          <span>CTT / DPD</span>
+          <span>1-2 dias úteis</span>
+          <span>€4,99 (grátis &gt;€70)</span>
+        </div>
+        <div class="ship-table-row">
+          <span>🇵🇹 Madeira</span>
+          <span>CTT</span>
+          <span>3-5 dias úteis</span>
+          <span>€9,99</span>
+        </div>
+        <div class="ship-table-row">
+          <span>🇵🇹 Açores</span>
+          <span>CTT</span>
+          <span>4-6 dias úteis</span>
+          <span>€9,99</span>
+        </div>
+        <div class="ship-table-row">
+          <span>🇪🇸 Espanha Peninsular</span>
+          <span>GLS / DPD</span>
+          <span>2-4 dias úteis</span>
+          <span>€9,99</span>
+        </div>
+        <div class="ship-table-row">
+          <span>🇪🇸 Canárias &amp; Baleares</span>
+          <span>GLS</span>
+          <span>4-6 dias úteis</span>
+          <span>€14,99</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEVOLUÇÕES -->
+    <div style="margin-top:5rem">
+      <h2 class="section-title" style="font-size:2rem;margin-bottom:1rem">DEVOLUÇÕES &amp; TROCAS</h2>
+      <p style="color:var(--text-muted);max-width:600px;margin-bottom:3rem">Queremos que fiques 100% satisfeito. Se algo não correr bem, estamos aqui para resolver.</p>
+
+      <div class="return-grid">
+        <div class="return-card">
+          <div class="return-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Troca de Tamanho</h3>
+          <p>Aceites nos primeiros <strong>14 dias</strong> após receção, com produto em perfeito estado e embalagem original.</p>
+          <ul>
+            <li>Produto sem sinais de uso</li>
+            <li>Caixa original intacta</li>
+            <li>Contacta via WhatsApp</li>
+          </ul>
+        </div>
+        <div class="return-card">
+          <div class="return-icon"><i class="fas fa-bug"></i></div>
+          <h3>Produto com Defeito</h3>
+          <p>Se o produto vier danificado ou diferente do encomendado, <strong>resolução em 24h</strong> sem custos.</p>
+          <ul>
+            <li>Troca imediata</li>
+            <li>Ou reembolso total</li>
+            <li>Portes a nosso cargo</li>
+          </ul>
+        </div>
+        <div class="return-card">
+          <div class="return-icon"><i class="fas fa-times-circle"></i></div>
+          <h3>Não Aceite</h3>
+          <p>Devoluções por mudança de opinião ou danos causados pelo cliente não são aceites.</p>
+          <ul>
+            <li>Produto usado ou danificado</li>
+            <li>Após 14 dias da receção</li>
+            <li>Sem embalagem original</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div style="margin-top:5rem;background:var(--gray-dark);border:1px solid var(--gray-light);border-radius:16px;padding:3rem">
+      <h3 style="font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:700;margin-bottom:2rem">COMO FUNCIONA O PROCESSO DE COMPRA</h3>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Escolhe o modelo</h4>
+            <p>Navega no catálogo e encontra o sneaker ideal.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div>
+            <h4>Contacta via WhatsApp</h4>
+            <p>Envia-nos mensagem com modelo + tamanho.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Confirmamos e faturamos</h4>
+            <p>Confirmamos disponibilidade e enviamos o preço final.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div>
+            <h4>Pagamento</h4>
+            <p>MB Way, transferência ou PayPal — rápido e seguro.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div>
+            <h4>Enviamos em 24h</h4>
+            <p>O teu par sai do armazém com rastreamento incluído.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">06</div>
+          <div>
+            <h4>Entrega na tua porta</h4>
+            <p>Em 24-48h estás a calçar o teu novo par.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-inner">
+    <h2>PRONTO PARA ENCOMENDAR?</h2>
+    <p>Fala connosco agora via WhatsApp e recebe o teu par em 24h.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+      <a href="https://wa.me/351910000000" target="_blank" rel="noopener" class="btn btn-primary btn-lg">WhatsApp Agora</a>
+      <a href="shop.html" class="btn btn-outline btn-lg">Ver Catálogo</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+      <p>Sneakers e streetwear premium com entrega rápida em Portugal e Espanha.</p>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/351910000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <a href="shop.html">Todos os Produtos</a>
+      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=clothing">Vestuário</a>
+    </div>
+    <div class="footer-col">
+      <h4>Informações</h4>
+      <a href="about.html">Sobre Nós</a>
+      <a href="shipping.html">Envios</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-envelope" style="color:var(--accent)"></i> info@globalsupply.pt</p>
+      <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 000 000</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 Global Supply. Todos os direitos reservados.</p>
+      <div class="payment-icons">
+        <span>VISA</span><span>Mastercard</span><span>MB Way</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>O Teu Carrinho</h3>
+    <button onclick="closeCart()" class="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cart-total-price">—</span></div>
+    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Finalizar via WhatsApp</a>
+    <button onclick="cart.clear()" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:.75rem">Limpar</button>
+  </div>
+</div>
+
+<div class="size-modal-overlay" id="size-modal-overlay" onclick="if(event.target===this)closeSizeModal()">
+  <div class="size-modal">
+    <button class="size-modal-close" onclick="closeSizeModal()">✕</button>
+    <div class="size-modal-product">
+      <img id="modal-product-img" src="" alt="">
+      <div>
+        <div id="modal-product-brand" style="color:var(--accent);font-size:.8rem;font-weight:600;margin-bottom:.25rem"></div>
+        <div id="modal-product-name" style="font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700"></div>
+      </div>
+    </div>
+    <div class="size-grid" id="modal-size-grid"></div>
+    <div style="display:flex;gap:.75rem;margin-top:1.5rem">
+      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="confirmAddToCart()">Adicionar</button>
+      <button class="btn btn-dark" onclick="closeSizeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scroll-top" aria-label="Topo">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

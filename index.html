@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Global Supply — Sneakers e Streetwear Premium. Entrega rápida em Portugal e Espanha.">
+  <title>Global Supply | Sneakers & Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  <div class="announcement-track">
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+    <span>🔥 Novidades semanais em catálogo</span>
+    <span>📦 Portes grátis em compras acima de €70</span>
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+    <span>🔥 Novidades semanais em catálogo</span>
+    <span>📦 Portes grátis em compras acima de €70</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+    <nav class="nav">
+      <a href="index.html" class="active">Início</a>
+      <a href="pages/shop.html">Loja</a>
+      <a href="pages/about.html">Sobre</a>
+      <a href="pages/shipping.html">Envios</a>
+      <a href="pages/contact.html">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="openCart()" aria-label="Carrinho">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count"></span>
+      </button>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="logo">GLOBAL<em>SUPPLY</em></span>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer">✕</button>
+  </div>
+  <a href="index.html" onclick="toggleMobileNav()">Início</a>
+  <a href="pages/shop.html" onclick="toggleMobileNav()">Loja</a>
+  <a href="pages/about.html" onclick="toggleMobileNav()">Sobre Nós</a>
+  <a href="pages/shipping.html" onclick="toggleMobileNav()">Envios &amp; Devoluções</a>
+  <a href="pages/faq.html" onclick="toggleMobileNav()">FAQ</a>
+  <a href="pages/contact.html" onclick="toggleMobileNav()">Contacto</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://picsum.photos/seed/gshero/1920/1080')"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow">— Nova Coleção 2026</p>
+    <h1 class="hero-title">O SNEAKER<br>QUE PROCURAS<br><span>ESTÁ AQUI.</span></h1>
+    <p class="hero-sub">Nike, Jordan, Adidas, New Balance e muito mais.<br>Entregas em 24-48h para toda a Península Ibérica.</p>
+    <div class="hero-ctas">
+      <a href="pages/shop.html" class="btn btn-primary btn-lg">Ver Catálogo</a>
+      <a href="#releases" class="btn btn-outline btn-lg">Release Wall</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-num">+2000</span>
+        <span class="stat-label">Clientes</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">24-48h</span>
+        <span class="stat-label">Entrega</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Feedback</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">42</span>
+        <span class="stat-label">Modelos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <i class="fas fa-shipping-fast"></i>
+      <div>
+        <strong>Entrega Rápida</strong>
+        <span>24-48h PT &amp; ES</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-shield-alt"></i>
+      <div>
+        <strong>Compra Segura</strong>
+        <span>Pagamento protegido</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-undo-alt"></i>
+      <div>
+        <strong>Trocas Fáceis</strong>
+        <span>14 dias sem questões</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-headset"></i>
+      <div>
+        <strong>Suporte 7/7</strong>
+        <span>Resposta em &lt;2h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="section" id="new-arrivals">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Acabaram de chegar</p>
+      <h2 class="section-title">NOVIDADES</h2>
+      <a href="pages/shop.html" class="btn btn-outline">Ver Tudo →</a>
+    </div>
+    <div class="products-grid" id="new-arrivals-grid">
+      <!-- JS renders here -->
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY SPLIT -->
+<section class="category-split">
+  <a href="pages/shop.html?cat=sneakers" class="cat-card">
+    <img src="https://picsum.photos/seed/gscat1/900/675" alt="Sneakers">
+    <div class="cat-card-overlay"></div>
+    <div class="cat-card-content">
+      <h3>SNEAKERS</h3>
+      <span>Ver Coleção →</span>
+    </div>
+  </a>
+  <a href="pages/shop.html?cat=clothing" class="cat-card">
+    <img src="https://picsum.photos/seed/gscat2/900/675" alt="Vestuário">
+    <div class="cat-card-overlay"></div>
+    <div class="cat-card-content">
+      <h3>VESTUÁRIO</h3>
+      <span>Ver Coleção →</span>
+    </div>
+  </a>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="section section-dark" id="best-sellers">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Os mais pedidos</p>
+      <h2 class="section-title">BEST SELLERS</h2>
+      <a href="pages/shop.html" class="btn btn-outline">Ver Tudo →</a>
+    </div>
+    <div class="products-grid" id="best-sellers-grid">
+      <!-- JS renders here -->
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS MARQUEE -->
+<section class="brands-section">
+  <div class="brands-track">
+    <span>NIKE</span><span>JORDAN</span><span>ADIDAS</span><span>NEW BALANCE</span>
+    <span>ASICS</span><span>YEEZY</span><span>LOUIS VUITTON</span><span>DIOR</span>
+    <span>CORTEIZ</span><span>BURBERRY</span><span>GLOBAL SUPPLY</span>
+    <span>NIKE</span><span>JORDAN</span><span>ADIDAS</span><span>NEW BALANCE</span>
+    <span>ASICS</span><span>YEEZY</span><span>LOUIS VUITTON</span><span>DIOR</span>
+    <span>CORTEIZ</span><span>BURBERRY</span><span>GLOBAL SUPPLY</span>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-header centered">
+      <p class="section-eyebrow">O que dizem os clientes</p>
+      <h2 class="section-title">100% FEEDBACK POSITIVO</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Encomenda chegou no dia seguinte. Embalagem impecável, sneaker exactamente como nas fotos. Já fiz 3 encomendas e nunca desiludiu."</p>
+        <div class="review-author">
+          <img src="https://picsum.photos/seed/gsrev1/50/50" alt="João M.">
+          <div>
+            <strong>João M.</strong>
+            <span>Lisboa</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Os melhores sneakers que alguma vez comprei online em Portugal. Atendimento via Instagram foi top, responderam em minutos."</p>
+        <div class="review-author">
+          <img src="https://picsum.photos/seed/gsrev2/50/50" alt="Ana F.">
+          <div>
+            <strong>Ana F.</strong>
+            <span>Porto</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Pedi o Air Jordan 4 na segunda-feira e chegou na quarta. Qualidade top, tamanho certinho. Recomendo a 100%!"</p>
+        <div class="review-author">
+          <img src="https://picsum.photos/seed/gsrev3/50/50" alt="Miguel S.">
+          <div>
+            <strong>Miguel S.</strong>
+            <span>Braga</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Encontrei aqui o Air Max TN em colorway que não achei em lado nenhum. Entrega rápida e embalagem espetacular."</p>
+        <div class="review-author">
+          <img src="https://picsum.photos/seed/gsrev4/50/50" alt="Tiago L.">
+          <div>
+            <strong>Tiago L.</strong>
+            <span>Setúbal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELEASE WALL -->
+<section class="section section-dark" id="releases">
+  <div class="container">
+    <div class="section-header centered">
+      <p class="section-eyebrow">Faz-te a tempo</p>
+      <h2 class="section-title">RELEASE WALL</h2>
+      <p style="color:var(--text-muted);margin-top:.5rem">Notifica-te antes que esgotem — sê o primeiro a ter.</p>
+    </div>
+    <div class="release-table" id="release-table">
+      <!-- JS renders here -->
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM SECTION -->
+<section class="insta-section section">
+  <div class="container">
+    <div class="section-header centered">
+      <p class="section-eyebrow">Segue-nos</p>
+      <h2 class="section-title">@GLOBALSUPPLY</h2>
+      <p style="color:var(--text-muted);margin-top:.5rem">Partilha o teu look com <strong>#GlobalSupplyPT</strong></p>
+    </div>
+    <div class="insta-grid">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-post">
+        <img src="https://picsum.photos/seed/gsinsta1/400/400" alt="Instagram">
+        <div class="insta-hover"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-post">
+        <img src="https://picsum.photos/seed/gsinsta2/400/400" alt="Instagram">
+        <div class="insta-hover"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-post">
+        <img src="https://picsum.photos/seed/gsinsta3/400/400" alt="Instagram">
+        <div class="insta-hover"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-post">
+        <img src="https://picsum.photos/seed/gsinsta4/400/400" alt="Instagram">
+        <div class="insta-hover"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-post">
+        <img src="https://picsum.photos/seed/gsinsta5/400/400" alt="Instagram">
+        <div class="insta-hover"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-post">
+        <img src="https://picsum.photos/seed/gsinsta6/400/400" alt="Instagram">
+        <div class="insta-hover"><i class="fab fa-instagram"></i></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-outline">Seguir no Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="container newsletter-inner">
+    <div>
+      <h2>ENTRA NA FAMÍLIA</h2>
+      <p>Sê o primeiro a saber dos novos drops, promoções exclusivas e releases limitados.</p>
+    </div>
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" placeholder="O teu email" required>
+      <button type="submit" class="btn btn-primary">Subscrever</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+      <p>Sneakers e streetwear premium com entrega rápida em Portugal e Espanha. Qualidade garantida em cada par.</p>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/351910000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <a href="pages/shop.html?cat=sneakers">Sneakers Nike</a>
+      <a href="pages/shop.html?cat=sneakers">Sneakers Jordan</a>
+      <a href="pages/shop.html?cat=sneakers">Adidas &amp; New Balance</a>
+      <a href="pages/shop.html?cat=sneakers">Luxury Sneakers</a>
+      <a href="pages/shop.html?cat=clothing">Vestuário</a>
+    </div>
+    <div class="footer-col">
+      <h4>Informações</h4>
+      <a href="pages/about.html">Sobre Nós</a>
+      <a href="pages/shipping.html">Envios &amp; Devoluções</a>
+      <a href="pages/faq.html">FAQ</a>
+      <a href="pages/contact.html">Contacto</a>
+      <a href="#releases">Release Wall</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-envelope" style="color:var(--accent)"></i> info@globalsupply.pt</p>
+      <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 000 000</p>
+      <p><i class="fab fa-instagram" style="color:var(--accent)"></i> @globalsupplyPT</p>
+      <p style="margin-top:1rem;font-size:.8rem;color:var(--text-muted)">Segunda – Sábado<br>10h – 22h</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 Global Supply. Todos os direitos reservados.</p>
+      <div class="payment-icons">
+        <span>VISA</span><span>Mastercard</span><span>MB Way</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>O Teu Carrinho</h3>
+    <button onclick="closeCart()" class="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total-price">—</span>
+    </div>
+    <p style="font-size:.75rem;color:var(--text-muted);margin-bottom:1rem">Portes calculados no checkout. Envio gratuito acima de €70.</p>
+    <a href="pages/contact.html" class="btn btn-primary" style="width:100%;justify-content:center">Finalizar Pedido via WhatsApp</a>
+    <button onclick="cart.clear()" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:.75rem">Limpar Carrinho</button>
+  </div>
+</div>
+
+<!-- SIZE MODAL -->
+<div class="size-modal-overlay" id="size-modal-overlay" onclick="if(event.target===this)closeSizeModal()">
+  <div class="size-modal">
+    <button class="size-modal-close" onclick="closeSizeModal()">✕</button>
+    <div class="size-modal-product">
+      <img id="modal-product-img" src="" alt="">
+      <div>
+        <div id="modal-product-brand" style="color:var(--accent);font-size:.8rem;font-weight:600;margin-bottom:.25rem"></div>
+        <div id="modal-product-name" style="font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700"></div>
+        <div style="color:var(--text-muted);font-size:.85rem;margin-top:.25rem">Seleciona o teu tamanho:</div>
+      </div>
+    </div>
+    <div class="size-grid" id="modal-size-grid"></div>
+    <div style="display:flex;gap:.75rem;margin-top:1.5rem">
+      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="confirmAddToCart()">Adicionar ao Carrinho</button>
+      <button class="btn btn-dark" style="justify-content:center" onclick="closeSizeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scroll-top" aria-label="Scroll ao topo">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+  // Render New Arrivals
+  const newArrivalsGrid = document.getElementById('new-arrivals-grid');
+  if (newArrivalsGrid) {
+    const newItems = PRODUCTS.filter(p => p.new).slice(0, 8);
+    newArrivalsGrid.innerHTML = newItems.map(p => renderProductCard(p)).join('');
+  }
+
+  // Render Best Sellers
+  const bestSellersGrid = document.getElementById('best-sellers-grid');
+  if (bestSellersGrid) {
+    const popular = PRODUCTS.filter(p => ['POPULAR','HOT','TRENDING'].includes(p.badge)).slice(0, 8);
+    bestSellersGrid.innerHTML = popular.map(p => renderProductCard(p)).join('');
+  }
+
+  // Render Release Wall
+  const releaseTable = document.getElementById('release-table');
+  if (releaseTable) {
+    releaseTable.innerHTML = RELEASES.map(r => `
+      <div class="release-row">
+        <img src="${r.image}" alt="${r.name}" class="release-thumb">
+        <div class="release-info">
+          <div class="release-name">${r.name}</div>
+          <div class="release-brand">${r.brand}</div>
+        </div>
+        <div class="release-date">${r.date}</div>
+        <div>${r.status === 'soon' ? '<span class="status-badge status-soon">EM BREVE</span>' : '<span class="status-badge status-coming">A CHEGAR</span>'}</div>
+        <button class="btn btn-primary release-notify" style="padding:.5rem 1.2rem;font-size:.75rem" onclick="showToast('✓ Notificação ativada para ' + '${r.name.replace(/'/g,"\\'")}')">Notificar</button>
+      </div>
+    `).join('');
+  }
+
+  // Sticky header
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header?.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+</body>
+</html>

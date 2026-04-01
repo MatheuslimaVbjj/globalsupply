@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a Global Supply — WhatsApp, Instagram ou email. Respondemos em menos de 2h.">
+  <title>Contacto | Global Supply</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="announcement-bar">
+  <div class="announcement-track">
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+    <span>📦 Portes grátis em compras acima de €70</span>
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+  </div>
+</div>
+
+<header class="header scrolled" id="header">
+  <div class="header-inner container">
+    <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+    <nav class="nav">
+      <a href="../index.html">Início</a>
+      <a href="shop.html">Loja</a>
+      <a href="about.html">Sobre</a>
+      <a href="shipping.html">Envios</a>
+      <a href="contact.html" class="active">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="openCart()" aria-label="Carrinho">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count"></span>
+      </button>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="logo">GLOBAL<em>SUPPLY</em></span>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer">✕</button>
+  </div>
+  <a href="../index.html" onclick="toggleMobileNav()">Início</a>
+  <a href="shop.html" onclick="toggleMobileNav()">Loja</a>
+  <a href="about.html" onclick="toggleMobileNav()">Sobre Nós</a>
+  <a href="shipping.html" onclick="toggleMobileNav()">Envios &amp; Devoluções</a>
+  <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
+  <a href="contact.html" onclick="toggleMobileNav()">Contacto</a>
+</nav>
+
+<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <p class="breadcrumb"><a href="../index.html">Início</a> / Contacto</p>
+    <h1>FALA CONNOSCO</h1>
+    <p>Respondemos em menos de 2 horas. Todos os dias da semana.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- CONTACT CHANNELS -->
+    <div class="contact-channels">
+      <a href="https://wa.me/351910000000" target="_blank" rel="noopener" class="contact-channel contact-channel--whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>+351 910 000 000</span>
+          <small>Resposta rápida — recomendado</small>
+        </div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="contact-channel contact-channel--instagram">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <strong>Instagram</strong>
+          <span>@globalsupplyPT</span>
+          <small>DM ou comentários</small>
+        </div>
+      </a>
+      <a href="mailto:info@globalsupply.pt" class="contact-channel contact-channel--email">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>Email</strong>
+          <span>info@globalsupply.pt</span>
+          <small>Resposta em até 24h</small>
+        </div>
+      </a>
+    </div>
+
+    <!-- CONTACT GRID -->
+    <div class="contact-grid" style="margin-top:5rem">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2 style="font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;margin-bottom:.5rem">ENVIA UMA MENSAGEM</h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem">Preenche o formulário e entraremos em contacto em breve.</p>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Nome *</label>
+              <input type="text" id="contact-name" name="name" placeholder="O teu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email *</label>
+              <input type="email" id="contact-email" name="email" placeholder="teu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Telemóvel</label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="+351 9XX XXX XXX">
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Assunto *</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" disabled selected>Seleciona o assunto</option>
+              <option value="order">Encomenda / Compra</option>
+              <option value="size">Dúvida de tamanho</option>
+              <option value="shipping">Envio / Rastreamento</option>
+              <option value="return">Troca / Devolução</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Mensagem *</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Descreve o teu pedido (modelo, tamanho, cor...)" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem">
+            <i class="fas fa-paper-plane" style="margin-right:.5rem"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <h3>HORÁRIO DE ATENDIMENTO</h3>
+          <div class="schedule-row">
+            <span>Segunda — Sexta</span>
+            <span>10:00 – 22:00</span>
+          </div>
+          <div class="schedule-row">
+            <span>Sábado</span>
+            <span>10:00 – 20:00</span>
+          </div>
+          <div class="schedule-row">
+            <span>Domingo</span>
+            <span>12:00 – 18:00</span>
+          </div>
+          <p style="margin-top:1rem;font-size:.85rem;color:var(--text-muted)">* Fora do horário respondemos no dia útil seguinte. Para urgências usa o WhatsApp.</p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>COMO FAZER UM PEDIDO</h3>
+          <ol style="list-style:decimal;padding-left:1.5rem;color:var(--text-muted);line-height:1.8">
+            <li>Escolhe o modelo no catálogo</li>
+            <li>Anota o nome e tamanho</li>
+            <li>Envia-nos por WhatsApp ou aqui</li>
+            <li>Confirmamos stock e preço</li>
+            <li>Pagamento → envio em 24h</li>
+          </ol>
+          <a href="shop.html" class="btn btn-outline" style="margin-top:1.5rem;display:inline-flex">Ver Catálogo →</a>
+        </div>
+
+        <div class="contact-info-card" style="background:var(--accent);border-color:var(--accent)">
+          <h3 style="color:var(--black)">RESPOSTA RÁPIDA</h3>
+          <p style="color:var(--black);font-size:.95rem">Para resposta imediata, contacta-nos diretamente pelo WhatsApp. É o canal mais rápido — respondemos em minutos.</p>
+          <a href="https://wa.me/351910000000?text=Olá! Tenho interesse num produto da Global Supply." target="_blank" rel="noopener" class="btn" style="background:var(--black);color:var(--accent);border-color:var(--black);margin-top:1rem;display:inline-flex">
+            <i class="fab fa-whatsapp" style="margin-right:.5rem"></i> Abrir WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+      <p>Sneakers e streetwear premium com entrega rápida em Portugal e Espanha.</p>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/351910000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <a href="shop.html">Todos os Produtos</a>
+      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=clothing">Vestuário</a>
+    </div>
+    <div class="footer-col">
+      <h4>Informações</h4>
+      <a href="about.html">Sobre Nós</a>
+      <a href="shipping.html">Envios</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-envelope" style="color:var(--accent)"></i> info@globalsupply.pt</p>
+      <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 000 000</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 Global Supply. Todos os direitos reservados.</p>
+      <div class="payment-icons">
+        <span>VISA</span><span>Mastercard</span><span>MB Way</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>O Teu Carrinho</h3>
+    <button onclick="closeCart()" class="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cart-total-price">—</span></div>
+    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Finalizar via WhatsApp</a>
+    <button onclick="cart.clear()" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:.75rem">Limpar</button>
+  </div>
+</div>
+
+<div class="size-modal-overlay" id="size-modal-overlay" onclick="if(event.target===this)closeSizeModal()">
+  <div class="size-modal">
+    <button class="size-modal-close" onclick="closeSizeModal()">✕</button>
+    <div class="size-modal-product">
+      <img id="modal-product-img" src="" alt="">
+      <div>
+        <div id="modal-product-brand" style="color:var(--accent);font-size:.8rem;font-weight:600;margin-bottom:.25rem"></div>
+        <div id="modal-product-name" style="font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700"></div>
+      </div>
+    </div>
+    <div class="size-grid" id="modal-size-grid"></div>
+    <div style="display:flex;gap:.75rem;margin-top:1.5rem">
+      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="confirmAddToCart()">Adicionar</button>
+      <button class="btn btn-dark" onclick="closeSizeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scroll-top" aria-label="Topo">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

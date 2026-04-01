@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sobre a Global Supply — a nossa história, valores e missão.">
+  <title>Sobre Nós | Global Supply</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="announcement-bar">
+  <div class="announcement-track">
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+    <span>🔥 Novidades semanais em catálogo</span>
+    <span>📦 Portes grátis em compras acima de €70</span>
+    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
+    <span>⭐ +2000 clientes satisfeitos</span>
+  </div>
+</div>
+
+<header class="header scrolled" id="header">
+  <div class="header-inner container">
+    <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+    <nav class="nav">
+      <a href="../index.html">Início</a>
+      <a href="shop.html">Loja</a>
+      <a href="about.html" class="active">Sobre</a>
+      <a href="shipping.html">Envios</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="openCart()" aria-label="Carrinho">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count"></span>
+      </button>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="logo">GLOBAL<em>SUPPLY</em></span>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer">✕</button>
+  </div>
+  <a href="../index.html" onclick="toggleMobileNav()">Início</a>
+  <a href="shop.html" onclick="toggleMobileNav()">Loja</a>
+  <a href="about.html" onclick="toggleMobileNav()">Sobre Nós</a>
+  <a href="shipping.html" onclick="toggleMobileNav()">Envios &amp; Devoluções</a>
+  <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
+  <a href="contact.html" onclick="toggleMobileNav()">Contacto</a>
+</nav>
+
+<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <p class="breadcrumb"><a href="../index.html">Início</a> / Sobre Nós</p>
+    <h1>SOBRE NÓS</h1>
+    <p>A história por trás da melhor loja de sneakers da Península Ibérica.</p>
+  </div>
+</div>
+
+<!-- ABOUT CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-eyebrow">A nossa história</p>
+        <h2 class="section-title" style="font-size:2.5rem">NASCEMOS DA PAIXÃO<br>POR SNEAKERS.</h2>
+        <p>A Global Supply nasceu da frustração de não encontrar os sneakers certos, em Portugal, a tempo. Cansados de esperar semanas por encomendas internacionais ou de pagar preços absurdos a revendedores sem suporte, decidimos criar a solução.</p>
+        <p style="margin-top:1rem">A nossa missão é simples: trazer os melhores modelos do mercado — Nike, Jordan, Adidas, New Balance e muito mais — direto para ti, com entrega em 24-48h e atendimento real.</p>
+        <p style="margin-top:1rem">Somos uma equipa jovem, movida pela cultura sneaker e pelo respeito pelo cliente. Cada encomenda é tratada como se fosse nossa.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://picsum.photos/seed/gsabout/800/500" alt="Global Supply">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header centered">
+      <p class="section-eyebrow">Os nossos pilares</p>
+      <h2 class="section-title">POR QUE ESCOLHER A GLOBAL SUPPLY</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Velocidade</h3>
+        <p>Envio em 24-48h para Portugal e Espanha. Rastreamento em tempo real com cada encomenda.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-check-circle"></i>
+        <h3>Qualidade</h3>
+        <p>Todos os produtos são verificados individualmente antes de saírem do nosso armazém.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-headset"></i>
+        <h3>Suporte Real</h3>
+        <p>Respondemos via WhatsApp e Instagram em menos de 2 horas. Todos os dias, incluindo fins de semana.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-users"></i>
+        <h3>Comunidade</h3>
+        <p>+2000 clientes satisfeitos. Uma família de sneakerheads que cresce a cada drop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-big">
+        <span class="stat-big-num">+2000</span>
+        <span class="stat-big-label">Clientes Felizes</span>
+      </div>
+      <div class="stat-big">
+        <span class="stat-big-num">100%</span>
+        <span class="stat-big-label">Feedback Positivo</span>
+      </div>
+      <div class="stat-big">
+        <span class="stat-big-num">42</span>
+        <span class="stat-big-label">Modelos em Catálogo</span>
+      </div>
+      <div class="stat-big">
+        <span class="stat-big-num">24h</span>
+        <span class="stat-big-label">Tempo Médio Entrega</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container cta-inner">
+    <h2>PRONTO PARA O TEU PRÓXIMO PAR?</h2>
+    <p>Explora o catálogo e encontra o sneaker que procuras.</p>
+    <a href="shop.html" class="btn btn-primary btn-lg">Ver Catálogo</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
+      <p>Sneakers e streetwear premium com entrega rápida em Portugal e Espanha.</p>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/351910000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <a href="shop.html">Todos os Produtos</a>
+      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=clothing">Vestuário</a>
+    </div>
+    <div class="footer-col">
+      <h4>Informações</h4>
+      <a href="about.html">Sobre Nós</a>
+      <a href="shipping.html">Envios</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-envelope" style="color:var(--accent)"></i> info@globalsupply.pt</p>
+      <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 000 000</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 Global Supply. Todos os direitos reservados.</p>
+      <div class="payment-icons">
+        <span>VISA</span><span>Mastercard</span><span>MB Way</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>O Teu Carrinho</h3>
+    <button onclick="closeCart()" class="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cart-total-price">—</span></div>
+    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Finalizar via WhatsApp</a>
+    <button onclick="cart.clear()" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:.75rem">Limpar</button>
+  </div>
+</div>
+
+<div class="size-modal-overlay" id="size-modal-overlay" onclick="if(event.target===this)closeSizeModal()">
+  <div class="size-modal">
+    <button class="size-modal-close" onclick="closeSizeModal()">✕</button>
+    <div class="size-modal-product">
+      <img id="modal-product-img" src="" alt="">
+      <div>
+        <div id="modal-product-brand" style="color:var(--accent);font-size:.8rem;font-weight:600;margin-bottom:.25rem"></div>
+        <div id="modal-product-name" style="font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700"></div>
+      </div>
+    </div>
+    <div class="size-grid" id="modal-size-grid"></div>
+    <div style="display:flex;gap:.75rem;margin-top:1.5rem">
+      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="confirmAddToCart()">Adicionar</button>
+      <button class="btn btn-dark" onclick="closeSizeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scroll-top" aria-label="Topo">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
