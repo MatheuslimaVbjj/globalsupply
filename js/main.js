@@ -885,6 +885,73 @@ function toggleMobileNav() {
   document.body.style.overflow = nav?.classList.contains('open') ? 'hidden' : '';
 }
 
+// ---------- MEGA MENU ----------
+// ---------- HERO VIDEO CROSSFADE ----------
+function initHeroVideos() {
+  const vids = Array.from(document.querySelectorAll('.hero-vid'));
+  if (!vids.length) return;
+
+  let current = 0;
+
+  // Inicia o primeiro vídeo
+  vids[0].play().catch(() => {});
+
+  function crossfade() {
+    const prev = current;
+    current = (current + 1) % vids.length;
+
+    // Carrega e arranca o próximo
+    vids[current].currentTime = 0;
+    vids[current].play().catch(() => {});
+
+    // Faz crossfade
+    vids[current].classList.add('active');
+    vids[prev].classList.remove('active');
+
+    // Para o anterior depois da transição acabar
+    setTimeout(() => {
+      vids[prev].pause();
+      vids[prev].currentTime = 0;
+    }, 1800);
+  }
+
+  // Ciclo a cada 8 segundos
+  setInterval(crossfade, 8000);
+}
+
+function initMegaMenu() {
+  const items = document.querySelectorAll('.nav-item.has-dropdown');
+
+  // Garantir que todos os menus começam fechados
+  items.forEach(i => i.classList.remove('open'));
+
+  items.forEach(item => {
+    const btn = item.querySelector('.nav-link');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = item.classList.contains('open');
+      // Fecha todos os dropdowns
+      items.forEach(i => i.classList.remove('open'));
+      // Abre só o clicado (toggle)
+      if (!isOpen) item.classList.add('open');
+    });
+    // Impede que cliques dentro do mega-menu fechem o dropdown
+    const menu = item.querySelector('.mega-menu');
+    if (menu) menu.addEventListener('click', e => e.stopPropagation());
+  });
+
+  // Clique fora fecha tudo
+  document.addEventListener('click', () => {
+    items.forEach(i => i.classList.remove('open'));
+  });
+}
+
+// ---------- MOBILE ACCORDION ----------
+function toggleMobAcc(btn) {
+  const acc = btn.closest('.mob-acc');
+  acc.classList.toggle('open');
+}
+
 // ---------- RENDER HELPERS ----------
 function getBadgeHTML(badge) {
   if (!badge) return '';
@@ -934,6 +1001,12 @@ function quickView(productId) {
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
   cart = new Cart();
+
+  // Hero video crossfade
+  initHeroVideos();
+
+  // Mega menu
+  initMegaMenu();
 
   // Scroll to top button
   const scrollBtn = document.getElementById('scroll-top');

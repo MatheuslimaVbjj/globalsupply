@@ -30,15 +30,96 @@
 <!-- HEADER -->
 <header class="header" id="header">
   <div class="header-inner container">
+
+    <!-- Logo -->
     <a href="index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
-    <nav class="nav">
-      <a href="index.html" class="active">Início</a>
-      <a href="pages/shop.html">Loja</a>
-      <a href="pages/about.html">Sobre</a>
-      <a href="pages/shipping.html">Envios</a>
-      <a href="pages/contact.html">Contacto</a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav" id="main-nav">
+
+      <!-- Sneakers -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Sneakers <i class="fas fa-chevron-down nav-chevron"></i></button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <p class="mega-label">Categorias</p>
+            <a href="pages/shop.html?cat=sneakers&sub=low-top" class="mega-link">Low Top</a>
+            <a href="pages/shop.html?cat=sneakers&sub=mid-top" class="mega-link">Mid Top</a>
+            <a href="pages/shop.html?cat=sneakers&sub=high-top" class="mega-link">High Top</a>
+            <a href="pages/shop.html?cat=sneakers&sub=running" class="mega-link">Running / Lifestyle</a>
+            <a href="pages/shop.html?cat=sneakers&sub=slides" class="mega-link">Slides &amp; Sandálias</a>
+          </div>
+          <div class="mega-col">
+            <p class="mega-label">Popular</p>
+            <a href="pages/shop.html?filter=new" class="mega-link">Novidades</a>
+            <a href="pages/shop.html?filter=hot" class="mega-link">Mais Vendidos</a>
+            <a href="pages/shop.html?filter=sale" class="mega-link mega-sale">Saldos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roupa -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Roupa <i class="fas fa-chevron-down nav-chevron"></i></button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <p class="mega-label">Categorias</p>
+            <a href="pages/shop.html?cat=clothing&sub=tshirts" class="mega-link">T-Shirts</a>
+            <a href="pages/shop.html?cat=clothing&sub=hoodies" class="mega-link">Hoodies &amp; Sweats</a>
+            <a href="pages/shop.html?cat=clothing&sub=pants" class="mega-link">Calças &amp; Shorts</a>
+            <a href="pages/shop.html?cat=clothing&sub=jackets" class="mega-link">Casacos &amp; Jackets</a>
+            <a href="pages/shop.html?cat=clothing&sub=tracksuits" class="mega-link">Fatos de Treino</a>
+          </div>
+          <div class="mega-col">
+            <p class="mega-label">Popular</p>
+            <a href="pages/shop.html?filter=new" class="mega-link">Novidades</a>
+            <a href="pages/shop.html?filter=hot" class="mega-link">Mais Vendidos</a>
+            <a href="pages/shop.html?filter=sale" class="mega-link mega-sale">Saldos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acessórios -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Acessórios <i class="fas fa-chevron-down nav-chevron"></i></button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <p class="mega-label">Categorias</p>
+            <a href="pages/shop.html?cat=accessories&sub=caps" class="mega-link">Bonés &amp; Gorros</a>
+            <a href="pages/shop.html?cat=accessories&sub=socks" class="mega-link">Meias</a>
+            <a href="pages/shop.html?cat=accessories&sub=bags" class="mega-link">Mochilas &amp; Bags</a>
+            <a href="pages/shop.html?cat=accessories&sub=wallets" class="mega-link">Carteiras</a>
+          </div>
+          <div class="mega-col">
+            <p class="mega-label">Popular</p>
+            <a href="pages/shop.html?filter=new" class="mega-link">Novidades</a>
+            <a href="pages/shop.html?filter=hot" class="mega-link">Mais Vendidos</a>
+            <a href="pages/shop.html?filter=sale" class="mega-link mega-sale">Saldos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links directos -->
+      <div class="nav-item">
+        <a href="pages/shop.html?filter=brands" class="nav-link nav-link-plain">Marcas</a>
+      </div>
+      <div class="nav-item">
+        <a href="pages/shop.html?filter=outfits" class="nav-link nav-link-plain">Outfits</a>
+      </div>
+      <div class="nav-item">
+        <a href="index.html#releases" class="nav-link nav-link-plain">Drops</a>
+      </div>
+      <div class="nav-item">
+        <a href="pages/shop.html?filter=sale" class="nav-link nav-link-plain nav-sale">Saldos</a>
+      </div>
+
     </nav>
+
+    <!-- Actions -->
     <div class="header-actions">
+      <button class="header-icon-btn" aria-label="Pesquisar" onclick="document.getElementById('search-bar').classList.toggle('open')">
+        <i class="fas fa-search"></i>
+      </button>
       <button class="cart-btn" onclick="openCart()" aria-label="Carrinho">
         <i class="fas fa-shopping-bag"></i>
         <span class="cart-count"></span>
@@ -47,30 +128,98 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+
+  </div>
+
+  <!-- Search bar (slide-down) -->
+  <div class="search-bar" id="search-bar">
+    <div class="container">
+      <input type="text" placeholder="Pesquisar sneakers, marcas..." id="search-input" autocomplete="off">
+      <button onclick="document.getElementById('search-bar').classList.remove('open')"><i class="fas fa-times"></i></button>
+    </div>
   </div>
 </header>
 
 <!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav-header">
-    <span class="logo">GLOBAL<em>SUPPLY</em></span>
-    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer">✕</button>
+    <span class="logo" style="font-family:var(--font-heading);font-size:1.3rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase">GLOBAL<span style="color:var(--accent)">SUPPLY</span></span>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer"><i class="fas fa-times"></i></button>
   </div>
   <a href="index.html" onclick="toggleMobileNav()">Início</a>
-  <a href="pages/shop.html" onclick="toggleMobileNav()">Loja</a>
+
+  <!-- Mobile accordion — Sneakers -->
+  <div class="mob-acc">
+    <button class="mob-acc-btn" onclick="toggleMobAcc(this)">Sneakers <i class="fas fa-chevron-down"></i></button>
+    <div class="mob-acc-body">
+      <a href="pages/shop.html?cat=sneakers&sub=low-top" onclick="toggleMobileNav()">Low Top</a>
+      <a href="pages/shop.html?cat=sneakers&sub=mid-top" onclick="toggleMobileNav()">Mid Top</a>
+      <a href="pages/shop.html?cat=sneakers&sub=high-top" onclick="toggleMobileNav()">High Top</a>
+      <a href="pages/shop.html?cat=sneakers&sub=running" onclick="toggleMobileNav()">Running / Lifestyle</a>
+      <a href="pages/shop.html?cat=sneakers&sub=slides" onclick="toggleMobileNav()">Slides &amp; Sandálias</a>
+    </div>
+  </div>
+
+  <!-- Mobile accordion — Roupa -->
+  <div class="mob-acc">
+    <button class="mob-acc-btn" onclick="toggleMobAcc(this)">Roupa <i class="fas fa-chevron-down"></i></button>
+    <div class="mob-acc-body">
+      <a href="pages/shop.html?cat=clothing&sub=tshirts" onclick="toggleMobileNav()">T-Shirts</a>
+      <a href="pages/shop.html?cat=clothing&sub=hoodies" onclick="toggleMobileNav()">Hoodies &amp; Sweats</a>
+      <a href="pages/shop.html?cat=clothing&sub=pants" onclick="toggleMobileNav()">Calças &amp; Shorts</a>
+      <a href="pages/shop.html?cat=clothing&sub=jackets" onclick="toggleMobileNav()">Casacos &amp; Jackets</a>
+      <a href="pages/shop.html?cat=clothing&sub=tracksuits" onclick="toggleMobileNav()">Fatos de Treino</a>
+    </div>
+  </div>
+
+  <!-- Mobile accordion — Acessórios -->
+  <div class="mob-acc">
+    <button class="mob-acc-btn" onclick="toggleMobAcc(this)">Acessórios <i class="fas fa-chevron-down"></i></button>
+    <div class="mob-acc-body">
+      <a href="pages/shop.html?cat=accessories&sub=caps" onclick="toggleMobileNav()">Bonés &amp; Gorros</a>
+      <a href="pages/shop.html?cat=accessories&sub=socks" onclick="toggleMobileNav()">Meias</a>
+      <a href="pages/shop.html?cat=accessories&sub=bags" onclick="toggleMobileNav()">Mochilas &amp; Bags</a>
+      <a href="pages/shop.html?cat=accessories&sub=wallets" onclick="toggleMobileNav()">Carteiras</a>
+    </div>
+  </div>
+
+  <a href="pages/shop.html?filter=brands" onclick="toggleMobileNav()">Marcas</a>
+  <a href="pages/shop.html?filter=outfits" onclick="toggleMobileNav()">Outfits</a>
+  <a href="index.html#releases" onclick="toggleMobileNav()">Drops</a>
+  <a href="pages/shop.html?filter=sale" onclick="toggleMobileNav()" style="color:#e53935;font-weight:700">Saldos</a>
   <a href="pages/about.html" onclick="toggleMobileNav()">Sobre Nós</a>
-  <a href="pages/shipping.html" onclick="toggleMobileNav()">Envios &amp; Devoluções</a>
-  <a href="pages/faq.html" onclick="toggleMobileNav()">FAQ</a>
   <a href="pages/contact.html" onclick="toggleMobileNav()">Contacto</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('https://picsum.photos/seed/gshero/1920/1080')"></div>
+  <!-- VIDEO BACKGROUND — substitui os src pelos teus vídeos ou usa YouTube embed -->
+  <div class="hero-video-wrap">
+    <!-- Vídeo 1: Grupo streetwear em photoshoot urbano -->
+    <video class="hero-vid vid-a active" autoplay muted playsinline loop
+           poster="https://picsum.photos/seed/gshero/1920/1080">
+      <source src="https://videos.pexels.com/video-files/5319446/5319446-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    </video>
+    <!-- Vídeo 2: Grupo urban streetwear interior -->
+    <video class="hero-vid vid-b" muted playsinline loop
+           poster="https://picsum.photos/seed/gsherob/1920/1080">
+      <source src="https://videos.pexels.com/video-files/9709838/9709838-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    </video>
+    <!-- Vídeo 3: Dançarino hip-hop em túnel urbano -->
+    <video class="hero-vid vid-c" muted playsinline loop
+           poster="https://picsum.photos/seed/gshero2/1920/1080">
+      <source src="https://videos.pexels.com/video-files/13607733/13607733-uhd_2560_1440_24fps.mp4" type="video/mp4">
+    </video>
+    <!-- Vídeo 4: Hip-hop na rua -->
+    <video class="hero-vid vid-d" muted playsinline loop
+           poster="https://picsum.photos/seed/gshero3/1920/1080">
+      <source src="https://videos.pexels.com/video-files/8929221/8929221-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <p class="hero-eyebrow">— Nova Coleção 2026</p>
-    <h1 class="hero-title">O SNEAKER<br>QUE PROCURAS<br><span>ESTÁ AQUI.</span></h1>
+    <h1 class="hero-title">O TEU ESTILO<br><span>FALA ANTES DE TI.</span></h1>
     <p class="hero-sub">Nike, Jordan, Adidas, New Balance e muito mais.<br>Entregas em 24-48h para toda a Península Ibérica.</p>
     <div class="hero-ctas">
       <a href="pages/shop.html" class="btn btn-primary btn-lg">Ver Catálogo</a>
@@ -324,7 +473,7 @@
       <div class="social-links">
         <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/351910000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/351910346159" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
     <div class="footer-col">
@@ -346,7 +495,7 @@
     <div class="footer-col">
       <h4>Contacto</h4>
       <p><i class="fas fa-envelope" style="color:var(--accent)"></i> info@globalsupply.pt</p>
-      <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 000 000</p>
+      <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 346 159</p>
       <p><i class="fab fa-instagram" style="color:var(--accent)"></i> @globalsupplyPT</p>
       <p style="margin-top:1rem;font-size:.8rem;color:var(--text-muted)">Segunda – Sábado<br>10h – 22h</p>
     </div>
@@ -402,6 +551,14 @@
 
 <!-- SCROLL TOP -->
 <button class="scroll-top" id="scroll-top" aria-label="Scroll ao topo">↑</button>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/351910346159?text=Olá!%20Tenho%20interesse%20num%20produto%20da%20Global%20Supply." 
+   target="_blank" rel="noopener noreferrer"
+   class="wpp-float" aria-label="Falar no WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wpp-float-label">Falar connosco</span>
+</a>
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
