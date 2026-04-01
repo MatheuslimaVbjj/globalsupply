@@ -998,6 +998,84 @@ function quickView(productId) {
   openSizeModal(productId);
 }
 
+// ---------- YOUTUBE CROSSFADE ----------
+const YT_VIDEOS = [
+  { id: 'd-_A6SB-eJU', start: 4  }, // Air Dior × Travis Scott
+  { id: 'psyCXr9uqaQ', start: 28 }, // ASAP Rocky × Gucci Tailoring Campaign
+];
+let ytPlayers = [];
+let ytCurrent = 0;
+const YT_SWITCH_INTERVAL = 14000; // troca a cada 14 segundos
+
+window.onYouTubeIframeAPIReady = function () {
+  YT_VIDEOS.forEach((vid, i) => {
+    ytPlayers[i] = new YT.Player(`yt-player-${i}`, {
+      videoId: vid.id,
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        controls: 0,
+        showinfo: 0,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        disablekb: 1,
+        iv_load_policy: 3,
+        start: vid.start,
+        vq: 'hd1080',
+        loop: 1,
+        playlist: vid.id,
+      },
+      events: {
+        onReady: (e) => {
+          e.target.setPlaybackQuality('hd1080');
+          e.target.playVideo();
+        },
+        onStateChange: (e) => {
+          if (e.data === YT.PlayerState.ENDED) {
+            e.target.seekTo(YT_VIDEOS[i].start);
+            e.target.playVideo();
+          }
+        },
+      },
+    });
+  });
+  setTimeout(ytCrossfade, YT_SWITCH_INTERVAL);
+};
+
+function ytCrossfade() {
+  const prev = ytCurrent;
+  ytCurrent = (ytCurrent + 1) % ytPlayers.length;
+
+  const prevEl = document.getElementById(`yt-player-${prev}`);
+  const nextEl = document.getElementById(`yt-player-${ytCurrent}`);
+  if (!prevEl || !nextEl) return;
+
+  nextEl.classList.add('active');
+  nextEl.classList.remove('inactive');
+
+  setTimeout(() => {
+    prevEl.classList.remove('active');
+    prevEl.classList.add('inactive');
+  }, 1500);
+
+  setTimeout(ytCrossfade, YT_SWITCH_INTERVAL);
+}
+
+// ---------- PAGE LOADER ----------
+(function () {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+  const hide = () => loader.classList.add('hidden');
+  if (document.readyState === 'complete') {
+    setTimeout(hide, 300);
+  } else {
+    window.addEventListener('load', () => setTimeout(hide, 400));
+    // fallback — nunca ficar preso mais de 3s
+    setTimeout(hide, 3000);
+  }
+})();
+
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
   cart = new Cart();

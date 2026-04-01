@@ -155,7 +155,7 @@
   <a href="shop.html?filter=sale" onclick="toggleMobileNav()" style="color:#e53935">Saldos</a>
 </nav>
 
-<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1600269452-2337085f2133?w=1600&h=600&fit=crop&q=80')">
+<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
   <div class="page-hero-overlay"></div>
   <div class="container page-hero-content">
     <p class="breadcrumb"><a href="../index.html">Início</a> / FAQ</p>

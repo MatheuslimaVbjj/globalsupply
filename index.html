@@ -12,20 +12,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement-bar">
-  <div class="announcement-track">
-    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
-    <span>⭐ +2000 clientes satisfeitos</span>
-    <span>🔥 Novidades semanais em catálogo</span>
-    <span>📦 Portes grátis em compras acima de €70</span>
-    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
-    <span>⭐ +2000 clientes satisfeitos</span>
-    <span>🔥 Novidades semanais em catálogo</span>
-    <span>📦 Portes grátis em compras acima de €70</span>
-  </div>
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-logo">GLOBAL<span>SUPPLY</span></div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
 </div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -193,28 +186,11 @@
 
 <!-- HERO -->
 <section class="hero">
-  <!-- VIDEO BACKGROUND — substitui os src pelos teus vídeos ou usa YouTube embed -->
+  <!-- YouTube Background: crossfade multi-vídeo via IFrame API -->
   <div class="hero-video-wrap">
-    <!-- Vídeo 1: Grupo streetwear em photoshoot urbano -->
-    <video class="hero-vid vid-a active" autoplay muted playsinline loop
-           poster="https://picsum.photos/seed/gshero/1920/1080">
-      <source src="https://videos.pexels.com/video-files/5319446/5319446-uhd_2560_1440_25fps.mp4" type="video/mp4">
-    </video>
-    <!-- Vídeo 2: Grupo urban streetwear interior -->
-    <video class="hero-vid vid-b" muted playsinline loop
-           poster="https://picsum.photos/seed/gsherob/1920/1080">
-      <source src="https://videos.pexels.com/video-files/9709838/9709838-uhd_2560_1440_25fps.mp4" type="video/mp4">
-    </video>
-    <!-- Vídeo 3: Dançarino hip-hop em túnel urbano -->
-    <video class="hero-vid vid-c" muted playsinline loop
-           poster="https://picsum.photos/seed/gshero2/1920/1080">
-      <source src="https://videos.pexels.com/video-files/13607733/13607733-uhd_2560_1440_24fps.mp4" type="video/mp4">
-    </video>
-    <!-- Vídeo 4: Hip-hop na rua -->
-    <video class="hero-vid vid-d" muted playsinline loop
-           poster="https://picsum.photos/seed/gshero3/1920/1080">
-      <source src="https://videos.pexels.com/video-files/8929221/8929221-hd_1920_1080_30fps.mp4" type="video/mp4">
-    </video>
+    <div id="yt-player-0" class="hero-yt-player active"></div>
+    <div id="yt-player-1" class="hero-yt-player inactive"></div>
+    <div class="hero-yt-fallback"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
@@ -564,6 +540,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="js/main.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
   // Render New Arrivals
   const newArrivalsGrid = document.getElementById('new-arrivals-grid');

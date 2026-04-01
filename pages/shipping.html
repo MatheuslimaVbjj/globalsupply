@@ -12,29 +12,93 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<div class="announcement-bar">
-  <div class="announcement-track">
-    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
-    <span>⭐ +2000 clientes satisfeitos</span>
-    <span>📦 Portes grátis em compras acima de €70</span>
-    <span>🚀 Envios em 24-48h para Portugal &amp; Espanha</span>
-    <span>⭐ +2000 clientes satisfeitos</span>
-    <span>📦 Portes grátis em compras acima de €70</span>
-  </div>
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-logo">GLOBAL<span>SUPPLY</span></div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
 </div>
 
+
+
+
+
+<!-- HEADER -->
 <header class="header scrolled" id="header">
   <div class="header-inner container">
     <a href="../index.html" class="logo">GLOBAL<span>SUPPLY</span></a>
-    <nav class="nav">
-      <a href="../index.html">Início</a>
-      <a href="shop.html">Loja</a>
-      <a href="about.html">Sobre</a>
-      <a href="shipping.html" class="active">Envios</a>
-      <a href="contact.html">Contacto</a>
+
+    <nav class="nav" id="main-nav">
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Sneakers <i class="fas fa-chevron-down nav-chevron"></i></button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <p class="mega-label">Categorias</p>
+            <a href="shop.html?cat=sneakers&sub=low-top" class="mega-link">Low Top</a>
+            <a href="shop.html?cat=sneakers&sub=mid-top" class="mega-link">Mid Top</a>
+            <a href="shop.html?cat=sneakers&sub=high-top" class="mega-link">High Top</a>
+            <a href="shop.html?cat=sneakers&sub=running" class="mega-link">Running / Lifestyle</a>
+            <a href="shop.html?cat=sneakers&sub=slides" class="mega-link">Slides &amp; Sandálias</a>
+          </div>
+          <div class="mega-col">
+            <p class="mega-label">Popular</p>
+            <a href="shop.html?filter=new" class="mega-link">Novidades</a>
+            <a href="shop.html?filter=hot" class="mega-link">Mais Vendidos</a>
+            <a href="shop.html?filter=sale" class="mega-link mega-sale">Saldos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Roupa <i class="fas fa-chevron-down nav-chevron"></i></button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <p class="mega-label">Categorias</p>
+            <a href="shop.html?cat=clothing&sub=tshirts" class="mega-link">T-Shirts</a>
+            <a href="shop.html?cat=clothing&sub=hoodies" class="mega-link">Hoodies &amp; Sweats</a>
+            <a href="shop.html?cat=clothing&sub=pants" class="mega-link">Calças &amp; Shorts</a>
+            <a href="shop.html?cat=clothing&sub=jackets" class="mega-link">Casacos &amp; Jackets</a>
+            <a href="shop.html?cat=clothing&sub=tracksuits" class="mega-link">Fatos de Treino</a>
+          </div>
+          <div class="mega-col">
+            <p class="mega-label">Popular</p>
+            <a href="shop.html?filter=new" class="mega-link">Novidades</a>
+            <a href="shop.html?filter=hot" class="mega-link">Mais Vendidos</a>
+            <a href="shop.html?filter=sale" class="mega-link mega-sale">Saldos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Acessórios <i class="fas fa-chevron-down nav-chevron"></i></button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <p class="mega-label">Categorias</p>
+            <a href="shop.html?cat=accessories&sub=caps" class="mega-link">Bonés &amp; Gorros</a>
+            <a href="shop.html?cat=accessories&sub=socks" class="mega-link">Meias</a>
+            <a href="shop.html?cat=accessories&sub=bags" class="mega-link">Mochilas &amp; Bags</a>
+            <a href="shop.html?cat=accessories&sub=wallets" class="mega-link">Carteiras</a>
+          </div>
+          <div class="mega-col">
+            <p class="mega-label">Popular</p>
+            <a href="shop.html?filter=new" class="mega-link">Novidades</a>
+            <a href="shop.html?filter=hot" class="mega-link">Mais Vendidos</a>
+            <a href="shop.html?filter=sale" class="mega-link mega-sale">Saldos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item"><a href="shop.html?filter=brands" class="nav-link nav-link-plain">Marcas</a></div>
+      <div class="nav-item"><a href="shop.html?filter=outfits" class="nav-link nav-link-plain">Outfits</a></div>
+      <div class="nav-item"><a href="../index.html#releases" class="nav-link nav-link-plain">Drops</a></div>
+      <div class="nav-item"><a href="shop.html?filter=sale" class="nav-link nav-link-plain nav-sale">Saldos</a></div>
+
     </nav>
+
     <div class="header-actions">
+      <button class="header-icon-btn" aria-label="Pesquisar" onclick="document.getElementById('search-bar').classList.toggle('open')">
+        <i class="fas fa-search"></i>
+      </button>
       <button class="cart-btn" onclick="openCart()" aria-label="Carrinho">
         <i class="fas fa-shopping-bag"></i>
         <span class="cart-count"></span>
@@ -44,22 +108,54 @@
       </button>
     </div>
   </div>
+
+  <div class="search-bar" id="search-bar">
+    <div class="container">
+      <input type="text" placeholder="Pesquisar sneakers, marcas..." id="search-input" autocomplete="off">
+      <button onclick="document.getElementById('search-bar').classList.remove('open')"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
 </header>
 
+<!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav-header">
-    <span class="logo">GLOBAL<em>SUPPLY</em></span>
-    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer">✕</button>
+    <span class="logo" style="font-family:var(--font-heading);font-size:1.3rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase">GLOBAL<span style="color:var(--accent)">SUPPLY</span></span>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer"><i class="fas fa-times"></i></button>
   </div>
   <a href="../index.html" onclick="toggleMobileNav()">Início</a>
-  <a href="shop.html" onclick="toggleMobileNav()">Loja</a>
-  <a href="about.html" onclick="toggleMobileNav()">Sobre Nós</a>
-  <a href="shipping.html" onclick="toggleMobileNav()">Envios &amp; Devoluções</a>
-  <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
-  <a href="contact.html" onclick="toggleMobileNav()">Contacto</a>
+  <div class="mob-acc">
+    <button class="mob-acc-btn" onclick="toggleMobAcc(this)">Sneakers <i class="fas fa-chevron-down"></i></button>
+    <div class="mob-acc-body">
+      <a href="shop.html?cat=sneakers&sub=low-top" onclick="toggleMobileNav()">Low Top</a>
+      <a href="shop.html?cat=sneakers&sub=mid-top" onclick="toggleMobileNav()">Mid Top</a>
+      <a href="shop.html?cat=sneakers&sub=high-top" onclick="toggleMobileNav()">High Top</a>
+      <a href="shop.html?cat=sneakers&sub=running" onclick="toggleMobileNav()">Running / Lifestyle</a>
+    </div>
+  </div>
+  <div class="mob-acc">
+    <button class="mob-acc-btn" onclick="toggleMobAcc(this)">Roupa <i class="fas fa-chevron-down"></i></button>
+    <div class="mob-acc-body">
+      <a href="shop.html?cat=clothing&sub=tshirts" onclick="toggleMobileNav()">T-Shirts</a>
+      <a href="shop.html?cat=clothing&sub=hoodies" onclick="toggleMobileNav()">Hoodies &amp; Sweats</a>
+      <a href="shop.html?cat=clothing&sub=pants" onclick="toggleMobileNav()">Calças &amp; Shorts</a>
+    </div>
+  </div>
+  <div class="mob-acc">
+    <button class="mob-acc-btn" onclick="toggleMobAcc(this)">Acessórios <i class="fas fa-chevron-down"></i></button>
+    <div class="mob-acc-body">
+      <a href="shop.html?cat=accessories&sub=caps" onclick="toggleMobileNav()">Bonés &amp; Gorros</a>
+      <a href="shop.html?cat=accessories&sub=socks" onclick="toggleMobileNav()">Meias</a>
+      <a href="shop.html?cat=accessories&sub=bags" onclick="toggleMobileNav()">Mochilas &amp; Bags</a>
+    </div>
+  </div>
+  <a href="shop.html?filter=brands" onclick="toggleMobileNav()">Marcas</a>
+  <a href="shop.html?filter=outfits" onclick="toggleMobileNav()">Outfits</a>
+  <a href="../index.html#releases" onclick="toggleMobileNav()">Drops</a>
+  <a href="shop.html?filter=sale" onclick="toggleMobileNav()" style="color:#e53935">Saldos</a>
 </nav>
 
-<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
+<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=1600&h=600&fit=crop&q=80')">
   <div class="page-hero-overlay"></div>
   <div class="container page-hero-content">
     <p class="breadcrumb"><a href="../index.html">Início</a> / Envios &amp; Devoluções</p>

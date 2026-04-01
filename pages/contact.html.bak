@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FAQ Global Supply — Respostas às perguntas mais frequentes sobre envios, trocas e pagamentos.">
-  <title>FAQ | Global Supply</title>
+  <meta name="description" content="Contacta a Global Supply — WhatsApp, Instagram ou email. Respondemos em menos de 2h.">
+  <title>Contacto | Global Supply</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -155,172 +155,128 @@
   <a href="shop.html?filter=sale" onclick="toggleMobileNav()" style="color:#e53935">Saldos</a>
 </nav>
 
-<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1600269452-2337085f2133?w=1600&h=600&fit=crop&q=80')">
+<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
   <div class="page-hero-overlay"></div>
   <div class="container page-hero-content">
-    <p class="breadcrumb"><a href="../index.html">Início</a> / FAQ</p>
-    <h1>PERGUNTAS FREQUENTES</h1>
-    <p>Tudo o que precisas saber antes de comprar.</p>
+    <p class="breadcrumb"><a href="../index.html">Início</a> / Contacto</p>
+    <h1>FALA CONNOSCO</h1>
+    <p>Respondemos em menos de 2 horas. Todos os dias da semana.</p>
   </div>
 </div>
 
 <section class="section">
-  <div class="container faq-container">
+  <div class="container">
 
-    <div class="faq-category">
-      <h3 class="faq-category-title">🚚 Envios & Entregas</h3>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Qual é o prazo de entrega? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Enviamos em 24-48 horas úteis após confirmação do pagamento. Para Portugal Continental o prazo habitual é de 1-2 dias úteis. Para as ilhas (Madeira e Açores) e Espanha pode demorar até 3-5 dias úteis.</p>
+    <!-- CONTACT CHANNELS -->
+    <div class="contact-channels">
+      <a href="https://wa.me/351910346159" target="_blank" rel="noopener" class="contact-channel contact-channel--whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>+351 910 346 159</span>
+          <small>Resposta rápida — recomendado</small>
         </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Quanto custam os portes de envio? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Os portes de envio têm um custo de €4,99 para Portugal Continental. Para encomendas superiores a €70, o envio é <strong>completamente gratuito</strong>. Para Espanha e Ilhas consulta os valores no checkout ou fala connosco via WhatsApp.</p>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="contact-channel contact-channel--instagram">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <strong>Instagram</strong>
+          <span>@globalsupplyPT</span>
+          <small>DM ou comentários</small>
         </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Posso rastrear a minha encomenda? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Sim! Após o envio, recebes um número de rastreamento via WhatsApp ou email. Podes acompanhar a tua encomenda em tempo real através do website da transportadora (CTT, DPD ou GLS consoante o peso).</p>
+      </a>
+      <a href="mailto:info@globalsupply.pt" class="contact-channel contact-channel--email">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>Email</strong>
+          <span>info@globalsupply.pt</span>
+          <small>Resposta em até 24h</small>
         </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Enviam para Espanha? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Sim! Enviamos para toda a Espanha incluindo Ilhas Canárias e Baleares. O prazo habitual é de 2-4 dias úteis. Para mais informações sobre custos de envio para Espanha, contacta-nos.</p>
-        </div>
-      </div>
+      </a>
     </div>
 
-    <div class="faq-category">
-      <h3 class="faq-category-title">💳 Pagamentos</h3>
+    <!-- CONTACT GRID -->
+    <div class="contact-grid" style="margin-top:5rem">
 
-      <div class="faq-item">
-        <button class="faq-question">
-          Quais os métodos de pagamento aceites? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Aceitamos os seguintes métodos de pagamento:</p>
-          <ul>
-            <li>MB Way (preferencial)</li>
-            <li>Transferência bancária</li>
-            <li>PayPal</li>
-            <li>Multibanco (referência)</li>
-            <li>Cartão de crédito/débito (VISA, Mastercard)</li>
-          </ul>
-        </div>
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2 style="font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;margin-bottom:.5rem">ENVIA UMA MENSAGEM</h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem">Preenche o formulário e entraremos em contacto em breve.</p>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Nome *</label>
+              <input type="text" id="contact-name" name="name" placeholder="O teu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email *</label>
+              <input type="email" id="contact-email" name="email" placeholder="teu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Telemóvel</label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="+351 9XX XXX XXX">
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Assunto *</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" disabled selected>Seleciona o assunto</option>
+              <option value="order">Encomenda / Compra</option>
+              <option value="size">Dúvida de tamanho</option>
+              <option value="shipping">Envio / Rastreamento</option>
+              <option value="return">Troca / Devolução</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Mensagem *</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Descreve o teu pedido (modelo, tamanho, cor...)" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem">
+            <i class="fas fa-paper-plane" style="margin-right:.5rem"></i> Enviar Mensagem
+          </button>
+        </form>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question">
-          O pagamento é seguro? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Absolutamente. Todos os pagamentos são processados através de plataformas certificadas e seguras. Os teus dados pessoais e financeiros estão sempre protegidos. Nunca guardamos dados de cartão de crédito.</p>
+      <!-- INFO -->
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <h3>HORÁRIO DE ATENDIMENTO</h3>
+          <div class="schedule-row">
+            <span>Segunda — Sexta</span>
+            <span>10:00 – 22:00</span>
+          </div>
+          <div class="schedule-row">
+            <span>Sábado</span>
+            <span>10:00 – 20:00</span>
+          </div>
+          <div class="schedule-row">
+            <span>Domingo</span>
+            <span>12:00 – 18:00</span>
+          </div>
+          <p style="margin-top:1rem;font-size:.85rem;color:var(--text-muted)">* Fora do horário respondemos no dia útil seguinte. Para urgências usa o WhatsApp.</p>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question">
-          Posso pagar na entrega? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Neste momento não oferecemos pagamento na entrega. No entanto, o processo de compra é rápido e seguro — basta contactar-nos via WhatsApp ou Instagram para finalizar o pedido.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-category">
-      <h3 class="faq-category-title">↩️ Trocas & Devoluções</h3>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Posso trocar de tamanho? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Sim! Aceitamos trocas de tamanho nos primeiros 14 dias após a receção do produto, desde que o produto esteja em perfeito estado, com a embalagem original e sem sinais de uso. Contacta-nos via WhatsApp para iniciar o processo.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          E se o produto vier com defeito? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Raramente acontece, mas se o produto vier danificado ou diferente do pedido, garantimos resolução total: troca imediata ou reembolso completo. Envia fotos via WhatsApp e resolvemos em 24h.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Quem paga os portes da devolução? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Se a troca for por defeito do produto, os portes ficam a nosso cargo. Se for por preferência pessoal (ex: mudança de tamanho), os portes de devolução são responsabilidade do cliente.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-category">
-      <h3 class="faq-category-title">👟 Produtos</h3>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Como sei qual o meu tamanho certo? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Para Nike e Jordan, recomendamos pedir o teu tamanho habitual. Para Adidas Samba e New Balance, algumas pessoas preferem meia numeração a mais por serem mais estreitos. Se tiveres dúvidas, fala connosco antes de comprar — é para isso que estamos aqui.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Os preços estão todos "A definir" — porquê? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Os preços variam consoante o modelo, tamanho e disponibilidade. Para saberes o preço exato de um modelo específico, envia-nos uma mensagem via WhatsApp ou Instagram com o modelo e tamanho desejado. Respondemos em minutos.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Como compro um produto? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>O processo é simples:</p>
-          <ol>
-            <li>Escolhe o modelo e tamanho no catálogo</li>
-            <li>Adiciona ao carrinho ou contacta-nos diretamente</li>
-            <li>Envia-nos mensagem via WhatsApp com o teu pedido</li>
-            <li>Confirmamos disponibilidade e preço</li>
-            <li>Realizas o pagamento (MB Way ou transferência)</li>
-            <li>Enviamos em 24-48h com rastreamento</li>
+        <div class="contact-info-card">
+          <h3>COMO FAZER UM PEDIDO</h3>
+          <ol style="list-style:decimal;padding-left:1.5rem;color:var(--text-muted);line-height:1.8">
+            <li>Escolhe o modelo no catálogo</li>
+            <li>Anota o nome e tamanho</li>
+            <li>Envia-nos por WhatsApp ou aqui</li>
+            <li>Confirmamos stock e preço</li>
+            <li>Pagamento → envio em 24h</li>
           </ol>
+          <a href="shop.html" class="btn btn-outline" style="margin-top:1.5rem;display:inline-flex">Ver Catálogo →</a>
         </div>
-      </div>
-    </div>
 
-    <div class="faq-cta">
-      <h3>Ainda tens dúvidas?</h3>
-      <p>A nossa equipa responde em menos de 2 horas, todos os dias da semana.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem">
-        <a href="contact.html" class="btn btn-primary">Contactar</a>
-        <a href="https://wa.me/351910346159" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp</a>
+        <div class="contact-info-card" style="background:var(--accent);border-color:var(--accent)">
+          <h3 style="color:var(--black)">RESPOSTA RÁPIDA</h3>
+          <p style="color:var(--black);font-size:.95rem">Para resposta imediata, contacta-nos diretamente pelo WhatsApp. É o canal mais rápido — respondemos em minutos.</p>
+          <a href="https://wa.me/351910346159?text=Olá! Tenho interesse num produto da Global Supply." target="_blank" rel="noopener" class="btn" style="background:var(--black);color:var(--accent);border-color:var(--black);margin-top:1rem;display:inline-flex">
+            <i class="fab fa-whatsapp" style="margin-right:.5rem"></i> Abrir WhatsApp
+          </a>
+        </div>
       </div>
     </div>
 

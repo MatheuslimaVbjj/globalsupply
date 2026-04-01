@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FAQ Global Supply — Respostas às perguntas mais frequentes sobre envios, trocas e pagamentos.">
-  <title>FAQ | Global Supply</title>
+  <meta name="description" content="Catálogo Global Supply — Todos os sneakers e vestuário premium com envio 24-48h.">
+  <title>Loja | Global Supply</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
 
 
 
+<!-- HEADER -->
 <!-- HEADER -->
 <header class="header scrolled" id="header">
   <div class="header-inner container">
@@ -155,178 +156,63 @@
   <a href="shop.html?filter=sale" onclick="toggleMobileNav()" style="color:#e53935">Saldos</a>
 </nav>
 
-<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1600269452-2337085f2133?w=1600&h=600&fit=crop&q=80')">
+<!-- PAGE HERO -->
+<div class="page-hero" style="background-image:url('https://picsum.photos/seed/gspages/1920/400')">
   <div class="page-hero-overlay"></div>
   <div class="container page-hero-content">
-    <p class="breadcrumb"><a href="../index.html">Início</a> / FAQ</p>
-    <h1>PERGUNTAS FREQUENTES</h1>
-    <p>Tudo o que precisas saber antes de comprar.</p>
+    <p class="breadcrumb"><a href="../index.html">Início</a> / Loja</p>
+    <h1>CATÁLOGO</h1>
+    <p>Todos os modelos disponíveis — sneakers, vestuário e muito mais.</p>
   </div>
 </div>
 
+<!-- SHOP CONTENT -->
 <section class="section">
-  <div class="container faq-container">
+  <div class="container">
 
-    <div class="faq-category">
-      <h3 class="faq-category-title">🚚 Envios & Entregas</h3>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Qual é o prazo de entrega? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Enviamos em 24-48 horas úteis após confirmação do pagamento. Para Portugal Continental o prazo habitual é de 1-2 dias úteis. Para as ilhas (Madeira e Açores) e Espanha pode demorar até 3-5 dias úteis.</p>
-        </div>
+    <!-- FILTER BAR (top) -->
+    <div class="filter-bar">
+      <div class="filter-tabs" id="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Tudo</button>
+        <button class="filter-tab" data-filter="sneakers">Sneakers</button>
+        <button class="filter-tab" data-filter="clothing">Vestuário</button>
+        <button class="filter-tab" data-filter="new">Novidades</button>
+        <button class="filter-tab" data-brand="Nike">Nike</button>
+        <button class="filter-tab" data-brand="Jordan">Jordan</button>
+        <button class="filter-tab" data-brand="Adidas">Adidas</button>
+        <button class="filter-tab" data-brand="New Balance">New Balance</button>
+        <button class="filter-tab" data-brand="ASICS">ASICS</button>
+        <button class="filter-tab" data-subcategory="luxury">Luxury</button>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Quanto custam os portes de envio? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Os portes de envio têm um custo de €4,99 para Portugal Continental. Para encomendas superiores a €70, o envio é <strong>completamente gratuito</strong>. Para Espanha e Ilhas consulta os valores no checkout ou fala connosco via WhatsApp.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Posso rastrear a minha encomenda? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Sim! Após o envio, recebes um número de rastreamento via WhatsApp ou email. Podes acompanhar a tua encomenda em tempo real através do website da transportadora (CTT, DPD ou GLS consoante o peso).</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Enviam para Espanha? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Sim! Enviamos para toda a Espanha incluindo Ilhas Canárias e Baleares. O prazo habitual é de 2-4 dias úteis. Para mais informações sobre custos de envio para Espanha, contacta-nos.</p>
-        </div>
+      <div class="shop-sort">
+        <select id="sort-select" onchange="sortProducts()">
+          <option value="default">Ordenar por</option>
+          <option value="name-asc">Nome A–Z</option>
+          <option value="name-desc">Nome Z–A</option>
+          <option value="new-first">Novidades primeiro</option>
+        </select>
       </div>
     </div>
 
-    <div class="faq-category">
-      <h3 class="faq-category-title">💳 Pagamentos</h3>
+    <!-- RESULTS COUNT -->
+    <p class="results-count" id="results-count"></p>
 
-      <div class="faq-item">
-        <button class="faq-question">
-          Quais os métodos de pagamento aceites? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Aceitamos os seguintes métodos de pagamento:</p>
-          <ul>
-            <li>MB Way (preferencial)</li>
-            <li>Transferência bancária</li>
-            <li>PayPal</li>
-            <li>Multibanco (referência)</li>
-            <li>Cartão de crédito/débito (VISA, Mastercard)</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          O pagamento é seguro? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Absolutamente. Todos os pagamentos são processados através de plataformas certificadas e seguras. Os teus dados pessoais e financeiros estão sempre protegidos. Nunca guardamos dados de cartão de crédito.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Posso pagar na entrega? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Neste momento não oferecemos pagamento na entrega. No entanto, o processo de compra é rápido e seguro — basta contactar-nos via WhatsApp ou Instagram para finalizar o pedido.</p>
-        </div>
-      </div>
+    <!-- PRODUCTS GRID -->
+    <div class="products-grid products-grid--large" id="shop-grid">
+      <!-- JS renders here -->
     </div>
 
-    <div class="faq-category">
-      <h3 class="faq-category-title">↩️ Trocas & Devoluções</h3>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Posso trocar de tamanho? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Sim! Aceitamos trocas de tamanho nos primeiros 14 dias após a receção do produto, desde que o produto esteja em perfeito estado, com a embalagem original e sem sinais de uso. Contacta-nos via WhatsApp para iniciar o processo.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          E se o produto vier com defeito? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Raramente acontece, mas se o produto vier danificado ou diferente do pedido, garantimos resolução total: troca imediata ou reembolso completo. Envia fotos via WhatsApp e resolvemos em 24h.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Quem paga os portes da devolução? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Se a troca for por defeito do produto, os portes ficam a nosso cargo. Se for por preferência pessoal (ex: mudança de tamanho), os portes de devolução são responsabilidade do cliente.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-category">
-      <h3 class="faq-category-title">👟 Produtos</h3>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Como sei qual o meu tamanho certo? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Para Nike e Jordan, recomendamos pedir o teu tamanho habitual. Para Adidas Samba e New Balance, algumas pessoas preferem meia numeração a mais por serem mais estreitos. Se tiveres dúvidas, fala connosco antes de comprar — é para isso que estamos aqui.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Os preços estão todos "A definir" — porquê? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Os preços variam consoante o modelo, tamanho e disponibilidade. Para saberes o preço exato de um modelo específico, envia-nos uma mensagem via WhatsApp ou Instagram com o modelo e tamanho desejado. Respondemos em minutos.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Como compro um produto? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>O processo é simples:</p>
-          <ol>
-            <li>Escolhe o modelo e tamanho no catálogo</li>
-            <li>Adiciona ao carrinho ou contacta-nos diretamente</li>
-            <li>Envia-nos mensagem via WhatsApp com o teu pedido</li>
-            <li>Confirmamos disponibilidade e preço</li>
-            <li>Realizas o pagamento (MB Way ou transferência)</li>
-            <li>Enviamos em 24-48h com rastreamento</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-cta">
-      <h3>Ainda tens dúvidas?</h3>
-      <p>A nossa equipa responde em menos de 2 horas, todos os dias da semana.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem">
-        <a href="contact.html" class="btn btn-primary">Contactar</a>
-        <a href="https://wa.me/351910346159" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp</a>
-      </div>
+    <!-- EMPTY STATE -->
+    <div class="shop-empty" id="shop-empty" style="display:none">
+      <p style="font-size:2rem">🔍</p>
+      <p>Nenhum produto encontrado com esses filtros.</p>
+      <button class="btn btn-primary" style="margin-top:1rem" onclick="resetFilters()">Ver Tudo</button>
     </div>
 
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-brand">
@@ -340,14 +226,16 @@
     </div>
     <div class="footer-col">
       <h4>Loja</h4>
-      <a href="shop.html">Todos os Produtos</a>
-      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=sneakers">Sneakers Nike</a>
+      <a href="shop.html?cat=sneakers">Jordan</a>
+      <a href="shop.html?cat=sneakers">Adidas &amp; New Balance</a>
+      <a href="shop.html?cat=sneakers">Luxury Sneakers</a>
       <a href="shop.html?cat=clothing">Vestuário</a>
     </div>
     <div class="footer-col">
       <h4>Informações</h4>
       <a href="about.html">Sobre Nós</a>
-      <a href="shipping.html">Envios</a>
+      <a href="shipping.html">Envios &amp; Devoluções</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contacto</a>
     </div>
@@ -355,6 +243,7 @@
       <h4>Contacto</h4>
       <p><i class="fas fa-envelope" style="color:var(--accent)"></i> info@globalsupply.pt</p>
       <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +351 910 346 159</p>
+      <p><i class="fab fa-instagram" style="color:var(--accent)"></i> @globalsupplyPT</p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -367,6 +256,7 @@
   </div>
 </footer>
 
+<!-- CART SIDEBAR -->
 <div class="cart-overlay" id="cart-overlay"></div>
 <div class="cart-sidebar" id="cart-sidebar">
   <div class="cart-header">
@@ -375,12 +265,17 @@
   </div>
   <div class="cart-items" id="cart-items"></div>
   <div class="cart-footer" id="cart-footer" style="display:none">
-    <div class="cart-total"><span>Total</span><span id="cart-total-price">—</span></div>
-    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Finalizar via WhatsApp</a>
-    <button onclick="cart.clear()" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:.75rem">Limpar</button>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total-price">—</span>
+    </div>
+    <p style="font-size:.75rem;color:var(--text-muted);margin-bottom:1rem">Portes calculados no checkout.</p>
+    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center">Finalizar via WhatsApp</a>
+    <button onclick="cart.clear()" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:.75rem">Limpar Carrinho</button>
   </div>
 </div>
 
+<!-- SIZE MODAL -->
 <div class="size-modal-overlay" id="size-modal-overlay" onclick="if(event.target===this)closeSizeModal()">
   <div class="size-modal">
     <button class="size-modal-close" onclick="closeSizeModal()">✕</button>
@@ -389,12 +284,13 @@
       <div>
         <div id="modal-product-brand" style="color:var(--accent);font-size:.8rem;font-weight:600;margin-bottom:.25rem"></div>
         <div id="modal-product-name" style="font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700"></div>
+        <div style="color:var(--text-muted);font-size:.85rem;margin-top:.25rem">Seleciona o teu tamanho:</div>
       </div>
     </div>
     <div class="size-grid" id="modal-size-grid"></div>
     <div style="display:flex;gap:.75rem;margin-top:1.5rem">
-      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="confirmAddToCart()">Adicionar</button>
-      <button class="btn btn-dark" onclick="closeSizeModal()">Cancelar</button>
+      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="confirmAddToCart()">Adicionar ao Carrinho</button>
+      <button class="btn btn-dark" style="justify-content:center" onclick="closeSizeModal()">Cancelar</button>
     </div>
   </div>
 </div>
@@ -403,6 +299,95 @@
 <div class="toast" id="toast"></div>
 
 <script src="../js/main.js"></script>
+<script>
+  let currentFilter = 'all';
+  let currentBrand  = null;
+  let currentSub    = null;
+  let filteredProducts = [...PRODUCTS];
+
+  function applyFilter() {
+    filteredProducts = PRODUCTS.filter(p => {
+      let pass = true;
+      if (currentFilter === 'sneakers') pass = p.category === 'sneakers';
+      else if (currentFilter === 'clothing') pass = p.category === 'clothing';
+      else if (currentFilter === 'new') pass = p.new === true;
+      if (currentBrand && pass) pass = p.brand.toLowerCase().includes(currentBrand.toLowerCase());
+      if (currentSub && pass) pass = p.subcategory === currentSub;
+      return pass;
+    });
+    renderShop();
+  }
+
+  function resetFilters() {
+    currentFilter = 'all';
+    currentBrand = null;
+    currentSub = null;
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('[data-filter="all"]').classList.add('active');
+    filteredProducts = [...PRODUCTS];
+    renderShop();
+  }
+
+  function sortProducts() {
+    const val = document.getElementById('sort-select').value;
+    if (val === 'name-asc')   filteredProducts.sort((a,b) => a.name.localeCompare(b.name));
+    if (val === 'name-desc')  filteredProducts.sort((a,b) => b.name.localeCompare(a.name));
+    if (val === 'new-first')  filteredProducts.sort((a,b) => (b.new ? 1 : 0) - (a.new ? 1 : 0));
+    if (val === 'default')    filteredProducts = PRODUCTS.filter(p => {
+      let pass = true;
+      if (currentFilter === 'sneakers') pass = p.category === 'sneakers';
+      else if (currentFilter === 'clothing') pass = p.category === 'clothing';
+      else if (currentFilter === 'new') pass = p.new === true;
+      return pass;
+    });
+    renderShop();
+  }
+
+  function renderShop() {
+    const grid  = document.getElementById('shop-grid');
+    const empty = document.getElementById('shop-empty');
+    const count = document.getElementById('results-count');
+    if (!grid) return;
+    if (filteredProducts.length === 0) {
+      grid.innerHTML = '';
+      empty.style.display = 'block';
+      count.textContent = '';
+    } else {
+      empty.style.display = 'none';
+      grid.innerHTML = filteredProducts.map(p => renderProductCard(p, '../')).join('');
+      count.textContent = filteredProducts.length + ' produto' + (filteredProducts.length !== 1 ? 's' : '') + ' encontrado' + (filteredProducts.length !== 1 ? 's' : '');
+    }
+  }
+
+  // Filter tabs
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentBrand = tab.dataset.brand || null;
+      currentSub   = tab.dataset.subcategory || null;
+      currentFilter = tab.dataset.filter || (currentBrand || currentSub ? currentFilter : 'all');
+      if (tab.dataset.filter) { currentBrand = null; currentSub = null; }
+      applyFilter();
+    });
+  });
+
+  // Init
+  renderShop();
+
+  // URL param filter
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  if (catParam) {
+    const tab = document.querySelector(`[data-filter="${catParam}"]`);
+    if (tab) { tab.click(); }
+  }
+
+  // Sticky header on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('header')?.classList.toggle('scrolled', true);
+  });
+</script>
   <a href="https://wa.me/351910346159?text=Ol%C3%A1!%20Tenho%20interesse%20num%20produto%20da%20Global%20Supply."
      target="_blank" rel="noopener noreferrer"
      class="wpp-float" aria-label="Falar no WhatsApp">
